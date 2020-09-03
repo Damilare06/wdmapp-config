@@ -48,8 +48,7 @@ class Tau(Package):
 
     variant('scorep', default=False, description='Activates SCOREP support')
     variant('openmp', default=False, description='Use OpenMP threads')
-    variant('pthreads', default=True, description='Use POSIX threads')
-    variant('mpi', default=False, description='Specify use of TAU MPI wrapper library')
+    variant('mpi', default=True, description='Specify use of TAU MPI wrapper library')
     variant('phase', default=False, description='Generate phase based profiles')
     variant('papi', default=darwin_default, description='Activates Performance API')
     variant('binutils', default=True, description='Activates support of BFD GNU Binutils')
@@ -176,9 +175,6 @@ class Tau(Package):
 
         if '+scorep' in spec:
             options.append("-scorep=%s" % spec['scorep'].prefix)
-
-        if '+pthreads' in spec:
-            options.append('-pthread')
 
         if '+likwid' in spec:
             options.append("-likwid=%s" % spec['likwid'].prefix)
