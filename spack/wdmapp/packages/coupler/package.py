@@ -11,14 +11,17 @@ class Coupler(CMakePackage):
 
     homepage = "https://github.com/wdmapp/wdmapp_coupling"
     # FIXME, there is no tarball, but it still needs a URL, so it's fake
-    url      = "git@github.com:wdmapp/wdmapp_coupling.tar.gz"
-    git      = "git@github.com:wdmapp/wdmapp_coupling.git"
+    #url      = "git@github.com:wdmapp/wdmapp_coupling.tar.gz"
+    #git      = "git@github.com:wdmapp/wdmapp_coupling.git"
+    url      = "git@github.com:Damilare06/wdmapp_coupling.tar.gz"
+    git      = "git@github.com:Damilare06/wdmapp_coupling.git"
 
     maintainers = ['cwsmith','Damilare06','phyboyzhang']
 
     version('0.1.1', tag='v0.1.1', preferred=True)
     version('develop', branch='develop',
       git="git@github.com:SCOREC/wdmapp_coupling.git")
+    version('externalCpl', branch='sz_debug')
 
     depends_on('pkgconfig', type='build')
     depends_on('cmake@3.13:', type='build')

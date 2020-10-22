@@ -42,6 +42,8 @@ class Wdmapp(BundlePackage):
         when='+externalCpl')
     depends_on('coupler@0.1.1',
         when='+externalCpl')
+    depends_on('gem@externalCpl +coupling +openacc', 
+        when='+externalCpl')
 
     # variant +xgc1_legacy
     depends_on('xgc1@master +coupling_core_edge +coupling_core_edge_field +coupling_core_edge_varpi2',
@@ -54,7 +56,6 @@ class Wdmapp(BundlePackage):
     depends_on('effis@0.1.0 -python -compose', when='+effis')
     depends_on('gene@wdmapp-0.1.0 +effis', when='~externalCpl +effis')
     depends_on('xgc-devel@wdmapp-0.1.0 +effis', when='~externaCpl +effis')
-
 
     # FIXME these are hacks to avoid Spack not finding a feasible packages on its own
     # CWS - If the variant is not specified for hdf5 then there are
