@@ -21,11 +21,10 @@ class Coupler(CMakePackage):
     version('0.1.1', tag='v0.1.1', preferred=True)
     version('develop', branch='develop',
       git="git@github.com:SCOREC/wdmapp_coupling.git")
-    version('externalCpl', branch='sz_debug')
+    version('ext', branch='sz_debug')
 
     depends_on('pkgconfig', type='build')
     depends_on('cmake@3.13:', type='build')
-
     depends_on('adios2@2.5.0:')
     depends_on('kokkos@3.0.0:')
     depends_on('fftw@3.3.8:')

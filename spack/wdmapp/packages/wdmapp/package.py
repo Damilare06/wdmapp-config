@@ -57,6 +57,7 @@ class Wdmapp(BundlePackage):
     depends_on('gene@wdmapp-0.1.0 +effis', when='~externalCpl +effis')
     depends_on('xgc-devel@wdmapp-0.1.0 +effis', when='~externaCpl +effis')
 
+
     # FIXME these are hacks to avoid Spack not finding a feasible packages on its own
     # CWS - If the variant is not specified for hdf5 then there are
     # concretization errors associated with hdf5. I think this is related 

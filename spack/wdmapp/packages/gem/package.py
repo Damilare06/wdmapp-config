@@ -32,7 +32,8 @@ class Gem(CMakePackage):
     depends_on('mpi')
     depends_on('blas')
     depends_on('adios +fortran')
-    depends_on('adios2@2.5.0: +fortran')
+    depends_on('adios2')
+    #depends_on('adios2@2.5.0: +fortran')
     depends_on('pspline@0.1.0:')
     depends_on('perfstubs@kg')
 
