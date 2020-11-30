@@ -26,7 +26,7 @@ class Gem(CMakePackage):
 
     variant('openacc', default=False,
             description='Enable OpenACC')
-    variant('coupling', default=False,
+    variant('coupling', default=True,
             description='Enable GEM_COUPLING')
 
     depends_on('mpi')

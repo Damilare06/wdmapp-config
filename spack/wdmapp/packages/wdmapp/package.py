@@ -40,9 +40,10 @@ class Wdmapp(BundlePackage):
         when='+externalCpl')
     depends_on('xgc-devel@externalCpl +coupling_core_edge_gene -cabana +adios2',
         when='+externalCpl')
-    depends_on('coupler@0.1.1',
+    #depends_on('coupler@0.1.1',
+    depends_on('coupler@externalCpl',
         when='+externalCpl')
-    depends_on('gem@externalCpl +coupling +openacc', 
+    depends_on('gem@externalCpl +coupling', 
         when='+externalCpl')
 
     # variant +xgc1_legacy
